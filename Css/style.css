@@ -4,9 +4,10 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #232323 !important; 
-
-
  }
+
+
+
  .dropdown-toggle{
    padding: 5px 11px 4px 7px !important ; 
    border: 2px solid !important; 
@@ -45,6 +46,18 @@
    text-align: center;
    background-color: rgba(16, 26, 55, 0.7) !important;
    color: #fbf8f3 !important;
+}
+
+@media (max-width: 768px) {
+   .card-home{
+      position: absolute !important;
+      transform:translate(9.5%, 191%);
+      width: 84% !important;
+      height: max-content !important;
+      text-align: center;
+      background-color: rgba(16, 26, 55, 0.7) !important;
+      color: #fbf8f3 !important;
+   }
 }
 
 .open-btn{
@@ -247,8 +260,8 @@ hr{
     font-size: 0.8em;
 }
 
-.card-news{
 
+.card-news{
    width: 100%;
    height: 440px !important;
    background-color: rgb(160, 160, 160) !important;
@@ -259,27 +272,15 @@ hr{
 .img-fluid{
 
    height: 440px !important;
-   width: 33% !important;
+   width: 33.3344% !important;
   
 }
-
-.rot{
-   background-color: rgb(160, 160, 160);
-   transform: matrix(0.78, 0, -0.09, 1, 0, 0);
-   position: absolute;
-   height: 440px;
-   margin-left: 29%;
-
+@media (max-width: 768px) {
+   .img-fluid {
+      height: 440px !important;
+      width: 100% !important;
+   }
 }
-
-.rot2{
-   background-color: rgb(160, 160, 160);
-   transform: matrix(0.78, 0, 0.09, 1, 0, 0);
-   position: absolute;
-   height: 440px;
-   margin-left: 62.5%;
-}
-
 
 .img-la img{
    width: 100% !important;
@@ -322,16 +323,6 @@ hr{
    margin-bottom: 13%;
 }
 
-.div-join{
- 
-   width: 20% !important;
-   height: 215px;
-   background-color: #212834;
-   border-radius: 10px;
-   box-shadow: 1px 0px 16px -2px beige;
-   margin-left: 4%;
-   margin-top: 6% !important;
-}
 
 .div-join img{
    width: 45%;
@@ -352,6 +343,7 @@ hr{
    color: #3d8aef;
 }
 
+
 .footer-word{
    padding:20px 0px;
    border-bottom:2px solid white;
@@ -370,3 +362,7 @@ hr{
  .h6-footer{
    display: inline;
  }
+
+ .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+   --bs-gutter-x: 6.5rem !important;
+}

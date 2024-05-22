@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Movieland</title>
+     <link rel="stylesheet" href="Css/all.css">
+     <link rel="stylesheet" href="Css/style.css">
+     <!-- <link rel="stylesheet" href="Css/bootstrap.css">
+     <link rel="stylesheet" href="Css/bootstrap.min.css">
+     <link rel="stylesheet" href="Css/bootstrap.min.css.map">
+     <link rel="stylesheet" href="Css/bootstrap.css.map">
+     <link rel="stylesheet" href="js/bootstrap.bundle.js">
+     <link rel="stylesheet" href="js/bootstrap.bundle.js.map">
+     <link rel="stylesheet" href="js/bootstrap.bundle.min.js"> -->
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+    <nav style="z-index: 5;  position:fixed; background-color: #2b3445;" class="w-100 navbar navbar-expand-sm  navbar-dark ">
+        <div class="container-fluid" style="width: 70px;">
+            <a class="navbar-brand" href="#">
+              <img src="img/logo.jpg" alt="Avatar Logo" style="width:50px;" class="rounded-pill"> 
+            </a>
+          </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="javascript:void(0)" style="font-size: 25px; font-weight: bolder; 
+               border-right: 2px solid ; padding-right:10px ; ">Movieland</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar" >
+            <ul class="navbar-nav me-auto" >
+              <li class="nav-item" >
+                <a class="nav-link" href="javascript:void(0)">Films</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Anime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0)">Serias</a>
+              </li>
+              <li  class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><span class="t-top">T</span>op</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Attack On Titan</a></li>
+                  <li><a class="dropdown-item" href="#">Shawshenk</a></li>
+                  <li><a style="border-bottom:2px solid ; padding-bottom: 10px;" class="dropdown-item" href="#">Breaking Bad</a></li>
+                  <li><a class="dropdown-item" href="#">GOT</a></li>
+                  <li><a class="dropdown-item" href="#">Dark Night</a></li>
+                  <li><a class="dropdown-item" href="#">Joker</a></li>
+                </ul>
+              </li>
+
+            </ul>
+            <form class="d-flex">
+              <input  class=" form-control me-2" type="text" placeholder="Search">
+              <button  class="btn btn-primary" type="button">Search</button>
+            </form>
+                
+                <button style="margin-left: 10px;" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                  Login
+                </button>
+             
+              <!-- The Modal -->
+              <div class="modal" id="myModal" >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal Heading</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                      </div>
+              
+                    <!-- Modal body -->
+                <div class="modal-body">
+                <div class="form-outline mb-4" data-mdb-input-init>
+                    <label class="form-label" for="form1Example1">Email address</label>
+                    <input type="email" id="form1Example1" class="form-control" />
+                  </div>
+  
+                  <!-- Password input -->
+                  <div class="form-outline mb-4" data-mdb-input-init>
+                    <label class="form-label" for="form1Example2">Password</label>
+                    <input type="password" id="form1Example2" class="form-control" />             
+                  </div>
+  
+                  <!-- 2 column grid layout for inline styling -->
+                  <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                        <label class="form-check-label" for="form1Example3"> Remember me</label>
+                      </div>
+                    </div>
+  
+                    <div class="col text-center">
+                      <!-- Simple link -->
+                      <a href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+
+             <!-- Modal footer -->
+             <div class="modal-footer">
+                 <!-- Submit button -->
+              <button style="margin-right: 290px;" type="submit" class="btn btn-primary btn-block" data-mdb-ripple-init>Login</button>
+ 
+               <button  type="button" class="btn btn-danger bg-primary border-0" data-bs-dismiss="modal">Close</button>
+          </div>
+           </div>
+             </div>
+              
+          </div>
+        </div>
+      </nav>
+
+<div class="fixed-icon">
+  <div><i class="fa-brands fa-square-facebook"></i></div>
+  <div><i class="fa-brands fa-square-instagram"></i></div>
+  <div><i class="fa-brands fa-square-x-twitter"></i></div>
+  <div><i class="fa-brands fa-square-whatsapp"></i></div>
+  <div><i class="fa-brands fa-linkedin"></i></div>
+</div>
+
+      <!-- /////////////////////////////////////////////Home///////////////////////////////////////////////////////// -->
+
+      <!-- Carousel -->
+    <div  id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div style="height: 100vh;" class="carousel-inner">
+      <div class="carousel-item active">
+
+        <div class="card card-home" style="width: 18rem;">
+            <div style="width: 100%;" class="card-body">
+              <h5 style="font-size: 25px;" class="card-title">The last Of Us</h5>
+              <p style="font-size: 18px;" class="card-text"> Joel, who lost his daughter in the wake of the collapse of the world <br> in front of
+                 a dangerous virus that turns humans into fatal monsters</p>
+              <a href="#" class="btn btn-primary">Watch it!</a>
+            </div>
+        </div>
+
+        <img style="margin-top: 75px; height: 100vh; width: 100%;"src="img/home1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+      </div>
+
+      <div class="carousel-item">
+
+        <div class="card card-home" style="width: 18rem;">
+            <div  style="width: 100%;" class="card-body">
+              <h5 style="font-size: 25px;" class="card-title">Inglourious basterds</h5>
+              <p style="font-size: 18px;" class="card-text"> The story talks about a young woman named Shoshana ,who is witnessing the 
+                killing of her <br> family by a Nazi soldier  after Germany's occupation of France.</p>
+              <a href="#" class="btn btn-primary">Watch it!</a>
+            </div>
+        </div>
+
+        <img style="margin-top: 75px; height: 100vh; width: 100%;" src="img/home2.jpg" alt="Chicago" class="d-block" style="width:100%">
+      </div>
+
+      <div class="carousel-item">
+
+        <div class="card card-home" style="width: 18rem;">
+            <div  style="width: 100%;" class="card-body">
+              <h5 style="font-size: 25px;" class="card-title">Jujutsu kaisen</h5>
+              <p style="font-size: 17px;" class="card-text"> Itadori Yuuji is a boy with tremendous physical strength. One day, in order to 
+                save a friend who was <br> attacked by a curse, he eats a cursed finger. Here begins the story of a boy who becomes a curse</p>
+              <a href="#" class="btn btn-primary">Watch it!</a>
+            </div>
+        </div>
+        <img style="margin-top: 75px; height: 100vh; width: 100%;" src="img/home3.jpg" alt="New York" class="d-block" style="width:100%">
+      </div>
+
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <br>
+  
+  <!-- /////////////////////////////////////////////welcome///////////////////////////////////////////////////////// -->
+
+  <div class="card row-sm-12 card row-cols-lg-1" style="border: solid 2px #a8a8a8 ; background-color: #464545; color: #fbf8f3;">
+    <div class="card-body">
+      <h5 style="font-size: 25px;" class="card-title text-primary">Welcome</h5>
+      <p class="card-text">Welcome to Movieland! Dive into a world of cinematic wonders with our extensive collection of movies,
+         reviews, and trailers. Stay updated with the latest in film news and exclusive behind-the-scenes content. 
+         Join our vibrant community to share your thoughts and rate your favorite films. Enjoy the magic of movies at Movieland!
+      </p>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+  </div>
+  
+  <br>
+ <!-- /////////////////////////////////////////////collapse///////////////////////////////////////////////////////// -->
+    
+<div class="accordion" id="accordionExample">
+  <div class="item">
+     <div class="item-header" id="headingOne">
+        <h2 class="mb-0">
+           <button class="btn btn-link" type="button" data-toggle="collapse"
+              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+           Anime
+           <i class="fa fa-angle-down"></i>
+           </button>
+        </h2>
+     </div>
+     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+        data-parent="#accordionExample">
+        <div class="t-p">
+Dive into the mesmerizing world of anime, where captivating stories, stunning visuals, and unforgettable characters come together to create a unique and thrilling experience. Unleash your imagination and explore the limitless possibilities of this enchanting art form!
+        </div>
+     </div>
+  </div>
+  <div class="item">
+     <div class="item-header" id="headingTwo">
+        <h2 class="mb-0">
+           <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+           Films
+           <i class="fa fa-angle-down"></i>
+           </button>
+        </h2>
+     </div>
+     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+        data-parent="#accordionExample">
+        <div class="t-p">
+Experience the thrill of the latest blockbusters! From heart-pounding action to soul-stirring dramas, the newest films offer unforgettable adventures and spectacular visuals. Dive into captivating stories and discover the magic of modern cinema. Don't miss out on the excitement!  
+       </div>
+     </div>
+  </div>
+  <div class="item">
+     <div class="item-header" id="headingThree">
+        <h2 class="mb-0">
+           <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false"
+              aria-controls="collapseThree">
+           Serias
+           <i class="fa fa-angle-down"></i>
+           </button>
+        </h2>
+     </div>
+     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+        data-parent="#accordionExample">
+        <div class="t-p">
+Discover the hottest new TV series that everyone's talking about! From gripping dramas to hilarious comedies, these fresh shows bring you unforgettable characters and riveting plots. Dive into binge-worthy stories and join the excitement of the latest in television entertainment!
+        </div>
+     </div>
+  </div>
+
+</div>
+
+    <hr>
+ <!-- /////////////////////////////////////////////Feedback///////////////////////////////////////////////////////// -->
+
+ <div>
+
+<div class="card" style=" margin-left: 26%; width:50% ;border: solid 2px #a8a8a8 ; background-color: #464545; color: #fbf8f3;">
+ <div class="card-body">
+   <h5 style="font-size: 25px; text-align: center; text-shadow: #000000 0px 1px 13px;" class="card-title text-primary">Give your feedback on your experience. </h5>
+</div>
+</div>
+<div style="background-color: #2b3445; color: #fbf8f3; border-radius:10px ; padding-left: 20px;"  class=" mt-3" >
+    <p>Write Your Feedback Here And Press In Send Text</p>
+      <div class="mb-3 mt-3">
+        <label for="comment">Comments:</label>
+        <textarea style="margin-bottom: 15px; width: 70%; background-color: #585858; color: #fbf8f3;" class="form-control" rows="5" id="comment" name="text"></textarea>    
+        <button style="margin-bottom: 15px;" id="sendButton" class="btn btn-primary" data-bs-toggle="tooltip"
+        data-bs-placement="right" title="Send!">Send Text</button>
+      
+       <script>
+       // Initialize tooltips
+       var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+         return new bootstrap.Tooltip(tooltipTriggerEl)
+       })
+       </script>
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            alert('تم ارسال النص.');
+        });
+    </script>
+      </div>
+  </div>
+
+  <div class="card" style="background-color: #464545; color: #fbf8f3; text-shadow: #000000 0px 1px 13px;">
+    <div class="card-body">
+      <h5 style="font-size: 25px; text-align: center;" class="card-title text-primary">What is your opinion on the content on the website?</h5>
+   </div>
+   </div>
+   <div style="background-color: #2b3445; color: #fbf8f3; border-radius:10px ; padding-left: 20px;"  class=" mt-3" >
+       <p>Write Your opinion Here about the advantage and disadvantage then Press In Send Text</p>
+         <div class="mb-3 mt-3">
+           <label for="comment">Comments:</label>
+           <textarea style="margin-bottom: 15px; width: 70%; background-color: #585858; color: #fbf8f3;" class="form-control" rows="5" id="comment" name="text"></textarea>    
+           <button style="margin-bottom: 15px;" id="sndButton" class="btn btn-primary" data-bs-toggle="tooltip"
+           data-bs-placement="right" title="Send!">Send Text</button>
+         
+          <script>
+          // Initialize tooltips
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+          })
+          </script>
+       <script>
+           document.getElementById('sndButton').addEventListener('click', function() {
+               alert('تم ارسال النص.');
+           });
+       </script>
+         </div>
+     </div>
+    </div>
+     <hr>
+
+     
+     <div class="fixed-item"></div>
+
+     <br>
+
+      <!-- /////////////////////////////////////////////Cards-pop///////////////////////////////////////////////////////// -->
+
+
+     <div class="card" style="border: solid 2px #a8a8a8 ; background-color: #464545; color: #fbf8f3; margin-left: 26%; width:50%">
+      <div class="card-body">
+        <h5 style="font-size: 25px; text-align: center; text-shadow: #000000 0px 1px 13px;" class="card-title text-primary">Popular Films we have</h5>
+     </div>
+     </div>
+
+     <div class="container mt-5">
+      <div class="row gy-4">
+      <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-12  col-sm-12">
+      <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+        <img class="card-img-top" src="img/inception-pop.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">Inception</h4>
+          <p class="card-text"> a thief who enters dreams to plant an idea in a target's mind, 
+            facing a complex struggle as dreams and reality blur</p>
+          <a href="#" class="btn btn-primary">Watch Now!</a>
+      </div>
+    </div>
+    </div>
+
+  <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-12  col-sm-12">
+    <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+      <img class="card-img-top" src="img/dune-pop.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Dune</h4>
+        <p class="card-text"> Paul Atreides as he navigates political intrigue and warfare on the desert
+           planet Arrakis, the only source of the valuable spice melange.</p>
+        <a href="#" class="btn btn-primary">Watch Now!</a>
+    </div>
+  </div>
+</div>
+
+  <div class=" col-xxl-4 col-xl-4 col-lg-6 col-md-12  col-sm-12">
+  <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+    <img class="card-img-top" src="img/oppen-pop.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Oppenhaimer</h4>
+      <p class="card-text">depicts physicist J. Robert Oppenheimer's role in developing the 
+        atomic bomb and the ethical dilemmas it sparked</p>
+      <a href="#" class="btn btn-primary">Watch Now!</a>
+  </div>
+</div>
+</div>
+
+<div class=" col-xxl-4 col-xl-4 col-lg-6 col-md-12  col-sm-12">
+  <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+    <img class="card-img-top" src="img/naruto-pop.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Naruto</h4>
+      <p class="card-text"> Naruto Uzumaki, a young ninja aiming to become the strongest leader of his village.
+         Along the way, he faces many challenges and forms lasting friendships.</p>
+      <a href="#" class="btn btn-primary">Watch Now!</a>
+  </div>
+</div>
+</div>
+
+<div class=" col-xxl-4 col-xl-4 col-lg-6 col-md-12  col-sm-12">
+  <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+    <img class="card-img-top" src="img/aot-pop.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Attack On Titan</h4>
+      <p class="card-text"> is set in a world where humanity is forced to live within three enormous walls
+         to protect themselves from gigantic man-eating humanoids known as Titans</p>
+      <a href="#" class="btn btn-primary">Watch Now!</a>
+  </div>
+</div>
+</div>
+
+<div class=" col-xxl-4 col-xl-4 col-lg-6 col-md-12  col-sm-12">
+  <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+    <img class="card-img-top" src="img/death-pop.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Death note</h4>
+      <p class="card-text"> Light Yagami, who uses a notebook that kills anyone whose name is written in it,
+         leading to a tense battle of wits with detective L.</p>
+      <a href="#" class="btn btn-primary">Watch Now!</a>
+  </div>
+</div>
+</div>
+
+<div  class="col-xxl-4 mx-xl-auto mx-xxl-auto col-xl-6 col-lg-6 col-md-12  col-sm-12">
+  <div class="card card-pop" style="background-color: rgb(109, 109, 109);color: #fbf8f3; height: 550px;" >
+    <img class="card-img-top" src="img/Bb-pop.jpg" alt="Card image" style="height: 350px; width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Breaking Bad</h4>
+      <p class="card-text">tracks the transformation of a mild-mannered chemistry teacher into a ruthless drug lord,
+         exploring the consequences of his choices.</p>
+      <a href="#" class="btn btn-primary">Watch Now!</a>
+  </div>
+</div>
+</div>
+
+  <div class=" col-xxl-4 mx-xl-auto mx-xxl-auto  col-xl-6 col-lg-6 col-md-12  col-sm-12">
+  <div class="card card-pop" style="background-color: rgb(109, 109, 109); color: #fbf8f3; height: 550px;" >
+    <img class="card-img-top" src="img/lacasa-pop.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">La casa De papel</h4>
+      <p class="card-text"> depicts a group of robbers executing an audacious heist on the Royal Mint 
+        of Spain under the guidance of their mysterious leader, "The Professor."</p>
+      <a href="#" class="btn btn-primary">Watch Now!</a>
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
+<br><br>
+<div class="fixed-item2"></div>
+  <hr>
+
+  <!-- /////////////////////////////////////////////Best-actors///////////////////////////////////////////////////////// -->
+
+  <div class="card" style="border: solid 2px #a8a8a8 ; height: 80px; background-color: #464545; color: #fbf8f3; margin-left: 26%; width:50%">
+    <div class="card-body">
+      <h5 style="font-size: 30px; text-align: center; text-shadow: #000000 0px 1px 13px;" class="card-title text-primary">Best Actors 2023</h5>
+   </div>
+   </div>
+<br>
+
+<div class="container mt-5 mb-5">
+  <div class="g-5 row">
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+          <div class="profile-card profile-card2">
+              <div class="overlay"></div>
+              <h5>The Best director</h5>
+              <p class="date"> <i class="fa-regular fa-clock"></i> for year 2023</p>
+              <img class="img-best" src="img/sm2.jpg" alt="Profile Image">
+              <p  style="position: absolute; top:85%;"> Christopher Nolan <br> Best director in the movies</p> 
+          </div>
+      </div>
+
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="profile-card">
+            <div class="overlay"></div>
+            <h5>The best actor</h5>
+            <p class="date"><i class="fa-regular fa-clock"></i> for year 2023</p>
+            <img class="img-best" src="img/sm1.jpg" alt="Profile Image">
+            <p  style="position: absolute; top:85%"> Leonardo dicaprio <br> Best actor in the movies</p> 
+        </div>
+    </div>
+
+    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12  col-sm-12">
+      <div class="profile-card profile-card3">
+          <div class="overlay"></div>
+          <h5>The best actor</h5>
+          <p class="date"> <i class="fa-regular fa-clock"></i> for year 2023</p>
+          <img class="img-best" src="img/sm3.jpg" alt="Profile Image">
+          <p  style="position: absolute; top:85%;"> Ramy Malek <br> Best actor in the series </p> 
+      </div>
+  </div>
+
+
+  </div>
+</div>
+
+<hr>
+
+ <!-- /////////////////////////////////////////////latest news///////////////////////////////////////////////////////// -->
+
+ <h5 style="font-size: 35px; text-align: center; text-shadow: #000000 0px 1px 13px;" class="card-title text-primary">Most Watched</h5>
+  <br>
+      
+ <div class="container">
+
+  <div class="card mb-5 card-news">
+    <div class="hr-eff row g-0">
+      <div class="col-md-6">
+        <div style="margin-left:7%;" class="card-body">
+          <h5 class="card-title">The Shawshank Redemption</h5>
+          <p class="text-muted"><i class="fa-solid fa-calendar-days"></i> 1994</p>
+          <hr class="hr-u">
+          <p class="card-text card-text-most">“The Shawshank Redemption” is a powerful film that chronicles the experiences of Andy Dufresne,
+             a wrongly convicted banker sentenced to life in the harsh Shawshank Prison.</p>
+          <br>
+          <p>
+            <button class="btn btn-primary btn-fav"><i class="fa-solid fa-star icon-fav"></i> 9.3 </button>
+            <button class="btn btn-primary"><i class="fa-solid fa-clock"></i> 2h 30m </button>
+            <button class="btn btn-primary"><i class="fa-solid fa-play"></i> Play</button>
+          </p>
+        </div>
+      </div>
+      <div class="rot2 col-md-1"></div>
+      <div class="img-la col-md-4">
+        <img src="img/most1.jpg" class="img-fluid img-new " alt="...">
+      </div>
+    </div>
+  </div>
+ 
+ 
+ <div  class=" card mb-5 card-news">
+  <div  class=" hr-eff row g-0">  
+      <img  src="img/most2.jpg" class="img-fluid img-new  rounded-start" alt="...">
+    <div class="rot col-md-1"></div>
+    <div class="col-md-6">
+      <div style="margin-left:7% ;" class="card-body">
+        <h5 class="card-title">The Goodfather</h5>
+        <p class="text-muted"><i class="fa-solid fa-calendar-days"></i> 1972</p>
+        <hr class="hr-u">
+        <p class="card-text card-text-most">“The Goodfather” is a classic film that revolves around Don Vito Corleone, the aging
+           head of a powerful New York Mafia family.
+          Vito's youngest son and a decorated WWII .</p>
+        <br>
+        <p>
+        <button class="btn btn-primary btn-fav"><i class="fa-solid fa-star icon-fav"></i> 9.1</button>
+        <button class="btn btn-primary"><i class="fa-solid fa-clock"></i> 2h 55m </button>
+        <button class="btn btn-primary"><i class="fa-solid fa-play"></i> Play</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="card mb-5 card-news">
+    <div class="hr-eff row g-0">
+      <div class="col-md-6">
+        <div style="margin-left:7%;" class="card-body">
+          <h5 class="card-title">Demon Slayer</h5>
+          <p class="text-muted"><i class="fa-solid fa-calendar-days"></i> 2019</p>
+          <hr class="hr-u">
+          <p class="card-text card-text-most">Demon Slayer: Kimetsu no Yaiba” follows Tanjiro Kamado, a teenage boy in 
+            Taisho-era Japan. After his family is slaughtered by demons.
+            </p>
+          <br>
+          <p>
+            <button class="btn btn-primary btn-fav"><i class="fa-solid fa-star icon-fav"></i> 8.6</button>
+            <button class="btn btn-primary"><i class="fa-solid fa-clock"></i> 70 Episode </button>
+            <button class="btn btn-primary"><i class="fa-solid fa-play"></i> Play</button>
+          </p>
+        </div>
+      </div>
+      <div class="rot2 col-md-1"></div>
+      <div class="img-la col-md-4">
+        <img src="img/most3.jpg" class="img-new img-fluid" alt="...">
+      </div>
+    </div>
+  </div>
+
+
+<div  class=" card mb-5 card-news ">
+  <div class="hr-eff row g-0">
+    
+    <img  src="img/most4.jpg" class="img-fluid img-new  rounded-start" alt="...">
+  <div class="rot col-md-1"></div>
+  <div class="col-md-6">
+    <div style="margin-left:7% ;" class="card-body">
+      <h5 class="card-title">Spider-Man: No Way Home</h5>
+      <p class="text-muted"><i class="fa-solid fa-calendar-days"></i> 2021</p>
+      <hr class="hr-u">
+      <p class="card-text card-text-most">“Spider-Man: No Way Home” is a 2021 American superhero film based on
+         the Marvel Comics character Spider-Man. With Spider-Man's
+         identity now revealed.</p>
+      <br>
+      <p>
+      <button class="btn btn-primary btn-fav"><i class="fa-solid fa-star icon-fav"></i> 8.2</button>
+      <button class="btn btn-primary"><i class="fa-solid fa-clock"></i> 2h 28m </button>
+      <button class="btn btn-primary"><i class="fa-solid fa-play"></i> Play</button></p>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<hr>
+
+ <!-- /////////////////////////////////////////////join///////////////////////////////////////////////////////// -->
+
+
+<h5 style="font-size: 35px; text-align: center; text-shadow:#000000 0px 1px 13px;" class="card-title text-primary">Our Social Media</h5>
+
+<div style="margin-bottom:40px ;" class="container">
+  <div class="row">
+    <div class="div-join col-xl-4">
+      <h4 style="color: #02ff00; text-align: center; margin-top: 5%;">Whatsapp</h4>
+        <img src="img/whatsapp_2504957.png" alt="">
+        <a class="join-a" href="#"><i class="fa-solid fa-comment"></i> Send Message</a>
+    </div>
+    <div class="div-join col-xl-4">
+      <h4 style="color: #ff233c; text-align: center;margin-top: 5%;">Instagram</h4>
+      <img src="img/instagram_2504918.png" alt="">
+      <a class="join-a" href="#"><i class="fa-solid fa-user-plus"></i>  Follow</a>
+    </div>
+    <div class="div-join col-xl-4">
+      <h4 style="color: #5383ff; text-align: center;margin-top: 5%;">Linked IN</h4>
+       <img src="img/linkedin_2504923.png" alt="">
+       <a class="join-a" href="#"><i class="fa-solid fa-link"></i> Connect</a>
+    </div>
+    <div class="div-join col-xl-4">
+      <h4 style="color: #0048ff; text-align: center;margin-top: 5%;">Facebook</h4>
+      <img src="img/facebook.png" alt="">
+      <a class="join-a" href="#"><i class="fa-solid fa-thumbs-up"></i> Like</a>
+    </div>
+  </div>
+</div>
+
+
+ <!-- /////////////////////////////////////////////footer///////////////////////////////////////////////////////// -->
+
+
+  <footer class="text-center text-lg-start text-white" style="background-color: #363d4d">
+  
+    <section class="d-flex justify-content-between ">
+
+    </section>
+
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+       
+        <div class="row mt-3">
+        
+          <div style="text-align: center;" class="col-md-4 col-lg-4 col-xl-4 col-sm-12 mx-auto mb-4">
+
+         <div class="footer-word">
+           <img class="img-footer" src="img/thanks.png" alt="">
+           <h6 class="h6-footer text-uppercase fw-bold">Thanks for</h6>
+            </div>
+            
+            <p>
+              <a href="#!" class="text-white">Ahmed Seoudi</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Eng:Islam</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">SEF</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Movieland</a>
+            </p>
+          </div>
+
+          <div style="text-align: center; text-decoration: none;" class="col-md-4 col-lg-4 col-xl-4 col-sm-12 mx-auto mb-4">
+
+           <div class="footer-word">
+           <img class="img-footer" src="img/app.jpg" alt="">
+           <h6 class="h6-footer text-uppercase fw-bold">Get the app</h6>
+            </div>
+            <p>
+              <a style="text-decoration: none;" href="#!" class="text-white"><i class="fa-brands fa-android"></i> Android</a>
+            </p>
+            <p>
+              <a style="text-decoration: none;" href="#!" class="text-white"><i class="fa-brands fa-app-store-ios"></i> IOS</a>
+            </p>
+            <p>
+              <a style="text-decoration: none;"href="#!" class="text-white"><i class="fa-brands fa-apple"></i> MAC OS</a>
+            </p>
+            <p>
+              <a style="text-decoration: none;" href="#!" class="text-white"><i class="fa-brands fa-windows"></i> Windows</a>
+            </p>
+          </div>
+
+          <div style="text-align: center;" class="col-md-4 col-lg-4 col-xl-4 col-sm-12 mx-auto mb-md-0 mb-4">
+
+         <div class="footer-word">
+           <img class="img-footer" src="img/contact.jpg" alt="">
+           <h6 class="h6-footer text-uppercase fw-bold">Contact US</h6>
+            </div>
+
+            <p><i class="fas fa-home mr-3"></i> Elfayoum, itsa,taton</p>
+            <p><i class="fas fa-envelope mr-3"></i> seoudi@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +20 0100000001</p>
+            <p><i class="fas fa-print mr-3"></i> +20 0100000002</p>
+          </div>
+
+      
+    </section>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2024 Copyright:
+      <a  class="text-white" href="#">Movieland</a>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+      
+
+             
